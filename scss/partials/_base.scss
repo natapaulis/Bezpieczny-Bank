@@ -1,0 +1,171 @@
+* {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  box-sizing:border-box;
+}
+
+body {
+  background-color: #EBEBEB;
+}
+
+.main-width {
+  width: 90%;
+  margin: 0 auto;
+}
+
+//Sekcja górna z logo i searchem
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo, .form {
+  margin: 1.5em 0 1.5em 0;
+}
+.top .form {
+  position: relative;
+  display: block;
+  padding: 0;
+}
+
+.form input[type=submit]{
+  width: 200px;
+  height: 30px;
+  background-color: #45C5D4;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000000;
+  color: white;
+}
+
+.form input[type=search]{
+  width: 150px;
+  &::after {
+    content:"\f002";
+    font-family: "FontAwesome";
+    position: absolute;
+    left:130px;
+    top: 5px;
+    color: blue;
+    border-left: 1px solid #cacaca;
+    padding: 10px;
+    display: block;
+    height: 15px;
+  }
+}
+
+
+
+//Sekcja z nawigacja
+
+.nav {
+  display: flex;
+  align-content: flex-end;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.navbar {
+  margin: 1.5em 0 1em 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    padding: .4em;
+    border-right: 1px solid black;
+  }
+}
+
+.bank-name {
+  display: flex;
+  align-items: center;
+  margin-right: .8em;
+}
+
+.bank-name p {
+  font-size: 20px;
+}
+
+// Sekcja header ze zdjęciem
+
+.banner{
+  position: relative;
+}
+
+.triangle-pattern {
+  background-image: url("./../images/triangle.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 10px;
+}
+
+.square-pattern {
+  height: 10px;
+  background-color: #45C5D4;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.text {
+  position: absolute;
+  z-index: 4;
+  bottom: 150px;
+  right: 0;
+  background-color: #43C6D7;
+  width: 320px;
+  height: 180px;
+  border-radius: 10px 0px 0px 10px;
+  -moz-border-radius: 10px 0px 0px 10px;
+  -webkit-border-radius: 10px 0px 0px 10px;
+  border: 0px solid #000000;
+  p, h3 {
+    color: white;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  h3 {
+    position: absolute;
+    top:50px;
+    left: 30px;
+    font-size: 24px;
+    margin-top: 0;
+    font-weight:400;
+  }
+  p {
+    position: absolute;
+    top:25px;
+    left: 30px;
+    font-size: 12px;
+  }
+  a {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    display: block;
+    text-decoration: none;
+    margin: 0 auto;
+    width: 150px;
+    height: 35px;
+    background-color: black;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    color: white;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+// Sekcja z produktami
+
+.products {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 400px;
+}

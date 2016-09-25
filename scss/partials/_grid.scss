@@ -1,0 +1,39 @@
+.grid-container {
+  width:100%;
+  max-width:1200px;
+}
+
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+[class*="col-"] {
+  float: left;
+  min-height: 1px;
+  margin-bottom: .8em;
+}
+
+@for $i from 1 through 6{
+  .col-sm-#{$i} {
+     width: 16.66% * $i;
+    }
+  }
+
+@media #{$tablet} {
+  @for $i from 1 through 6{
+    .col-md-#{$i} {
+       width: 16.66% * $i;
+    }
+  }
+}
+
+@media #{$laptop} {
+  @for $i from 1 through 6{
+    .col-lg-#{$i} {
+       width: 16.66% * $i;
+      }
+  }
+}
