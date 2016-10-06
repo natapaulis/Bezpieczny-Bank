@@ -2,10 +2,12 @@
 <html lang="pl-PL">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bezpieczny Bank</title>
     <link href="css/style.css" rel="stylesheet" type = "text/css">
     <link href="bower_components/skeleton/css/normalize.css" rel="stylesheet">
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
 
@@ -54,15 +56,36 @@
         <img class="col-lg-2" src="images/keys.jpg">
         <div class="colleft-descript col-lg-4">
           <h3> Kredyt Hipoteczny </h3>
-          <p>
+          <p id="collleft-text">
             Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim.
           </p>
           <a href="#"> Dowiedz się więcej </a>
         </div>
       </div>
       <div class="collright col-lg-3">
-        <h3> Pożyczka gotówkowa </h3>
-        <a href="#"> Dowiedz się więcej </a>
+          <h3> Pożyczka gotówkowa </h3>
+          <div class="slider-section">
+              <div class="slider-value">
+                  <span>Kwota</span> <span id="value">20 000</span>
+              </div>
+              <br>
+              <div class="slider">
+                  <div class="slider-handle">|||</div>
+              </div>
+              <br>
+              <div class="slider-value">
+                  <span>Czas trwania</span> <span id="years">2 lata</span>
+              </div>
+              <br>
+              <div class="slider">
+                  <div class="slider-handle">|||</div>
+              </div>
+              <br>
+          </div>
+          <div class="sum">
+              <p class="total-value">Rata: <span>50zł</span></p>
+              <a href="#"> Dowiedz się więcej </a>
+          </div>
       </div>
     </section>
   </section>
@@ -149,4 +172,5 @@
 
 
 </body>
+    <script src="js/scriptJQ.js" type="text/javascript"> </script>
 </html>

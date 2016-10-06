@@ -1,23 +1,23 @@
 * {
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-  box-sizing:border-box;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    box-sizing:border-box;
 }
 
 body {
-  background-color: #EBEBEB;
+    background-color: #EBEBEB;
 }
 
 .main-width {
-  width: 85%;
-  margin: 0 auto;
+    width: 85%;
+    margin: $center;
 }
 
 //Sekcja górna z logo i searchem
 
 .top {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo, .form {
@@ -32,10 +32,8 @@ body {
 .form input[type=submit]{
   width: 166px;
   height: 30px;
-  background-color: #45C5D4;
-  border-radius: 10px 10px 10px 10px;
-  -moz-border-radius: 10px 10px 10px 10px;
-  -webkit-border-radius: 10px 10px 10px 10px;
+  background-color: $primary-color;
+  @include radius(10px);
   border: 0px solid #000000;
   color: white;
 }
@@ -43,7 +41,7 @@ body {
 .form input[type=search]{
   width: 150px;
   &::after {
-    background: url(images/Shape-5.png);
+    background: url("./../images/Shape-5.png");
     position: absolute;
     left:130px;
     top: 5px;
@@ -76,6 +74,9 @@ body {
     display: inline-block;
     padding: .4em;
     border-right: 1px solid #EBEBEB;
+    &:hover {
+         color: $primary-color; 
+      }
   }
 }
 
@@ -104,7 +105,7 @@ body {
 
 .square-pattern {
   height: 10px;
-  background-color: #45C5D4;
+  background-color: $primary-color;
 }
 
 .banner img {
@@ -116,12 +117,10 @@ body {
   z-index: 4;
   bottom: 175px;
   right: 0;
-  background-color: #43C6D7;
+  background-color: $primary-color;
   width: 375px;
   height: 205px;
-  border-radius: 10px 0px 0px 10px;
-  -moz-border-radius: 10px 0px 0px 10px;
-  -webkit-border-radius: 10px 0px 0px 10px;
+  @include radius(10px 0 0 10px);
   border: 0px solid #000000;
   p, h3 {
     color: white;
@@ -149,19 +148,20 @@ body {
     left: 30px;
     display: block;
     text-decoration: none;
-    margin: 0 auto;
+    margin: $center;
     width: 195px;
     height: 45px;
     background-color: black;
-    border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
+    @include radius(10px);
     border: 0px solid #000000;
     color: white;
     line-height: 45px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
+    &:hover {
+      font-weight: bold;
+    }
   }
 }
 
@@ -182,21 +182,78 @@ body {
         font-weight:400;
         color: #656565;
     }
-    p, h3 {
+    #collleft-text, h3 {
         margin-left: 45px;
     }
-    p { 
+    
+    #collleft-text { 
         width: 252px;
         height: 144px;
         font-size: 14px;
         color: #656565;
     }
     a {
-        display: block;
-        text-align: center;
         font-size: 18px;
-        color: #50c5da;
-        margin-top: 35px;
+        color: #50c5da; 
+    }
+
+}
+
+.colleft a {
+    width: 252px;
+    display: block;
+    text-align: right;
+    margin: 35px 0 0 45px;
+}
+
+.slider-section {
+    display: flex;
+    flex-direction: column;
+    width:335px;
+    margin-left:45px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid $primary-color;
+    .slider-value {
+        width:335px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .slider{
+        position: relative;
+        width: 335px;
+        height: 20px;
+        background-color: #EBEBEB;
+        .slider-handle {
+            position: absolute;
+            top: -50%;
+            width: 63px;
+            height: 38px;
+            background-color: $primary-color;
+            color: #ffffff;
+            line-height: 38px;
+            @include radius(10px);
+            text-align: center;
+            letter-spacing: 3px;
+        }
+        span{
+            font-size: 14px;
+        }
+    }
+}
+
+.sum {
+    display: flex;
+    justify-content: space-between;
+    width:335px;
+    margin: 20px 0 0 45px;  
+}
+
+.total-value {
+    font-size: 18px;
+    margin: 0;
+    span{
+        font-size: 22px;
+        color: $primary-color;
     }
 }
 
@@ -204,7 +261,7 @@ body {
 //Services part
 
 .services {
-    background-color: #43C6D7;
+    background-color: $primary-color;
     height:376px;
     padding-top: 40px;
     text-align: center;
@@ -221,19 +278,24 @@ body {
         font-weight: 400;
         margin: 10px 0;
     }
-    a{
+    a {
         font-size: 22px;
         line-height: 54px;
         text-decoration: none;
+        &:hover {
+            font-weight: bold;
+        }
     }
     .button {
         width: 242px;
         height: 54px;
-        border-radius: 8px;
+        @include radius(8px);
         border: 1px solid #ffffff;
         margin: 30px auto;
     }
 }
+
+//Avaiable products part
 
 .client_products {
     height: 375px;
@@ -252,12 +314,17 @@ body {
         font-size: 14px;
         font-weight: 400;
         line-height: 30px;
+        &:hover {
+            color: $primary-color;
+        }
     }
     ul {
         list-style-image: url("./../images/square.png");
     }
     
 }
+
+//Footer part
 
 .footer {
     color: #a0a0a0;

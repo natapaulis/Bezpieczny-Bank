@@ -26,17 +26,17 @@ body {
 .form input[type=submit] {
   width: 166px;
   height: 30px;
-  background-color: #45C5D4;
-  border-radius: 10px 10px 10px 10px;
-  -moz-border-radius: 10px 10px 10px 10px;
-  -webkit-border-radius: 10px 10px 10px 10px;
+  background-color: #43C6D7;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border: 0px solid #000000;
   color: white; }
 
 .form input[type=search] {
   width: 150px; }
   .form input[type=search]::after {
-    background: url(images/Shape-5.png);
+    background: url("./../images/Shape-5.png");
     position: absolute;
     left: 130px;
     top: 5px;
@@ -61,6 +61,8 @@ body {
     display: inline-block;
     padding: .4em;
     border-right: 1px solid #EBEBEB; }
+    .navbar li:hover {
+      color: #43C6D7; }
 
 .bank-name {
   display: flex;
@@ -81,7 +83,7 @@ body {
 
 .square-pattern {
   height: 10px;
-  background-color: #45C5D4; }
+  background-color: #43C6D7; }
 
 .banner img {
   width: 100%; }
@@ -94,9 +96,9 @@ body {
   background-color: #43C6D7;
   width: 375px;
   height: 205px;
-  border-radius: 10px 0px 0px 10px;
-  -moz-border-radius: 10px 0px 0px 10px;
-  -webkit-border-radius: 10px 0px 0px 10px;
+  border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+  -webkit-border-radius: 10px 0 0 10px;
   border: 0px solid #000000; }
   .text p, .text h3 {
     color: white;
@@ -125,15 +127,17 @@ body {
     width: 195px;
     height: 45px;
     background-color: black;
-    border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
     border: 0px solid #000000;
     color: white;
     line-height: 45px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px; }
+    .text a:hover {
+      font-weight: bold; }
 
 .products {
   background-color: white;
@@ -147,19 +151,67 @@ body {
     font-size: 27px;
     font-weight: 400;
     color: #656565; }
-  .colleft p, .colleft h3, .collright p, .collright h3 {
+  .colleft #collleft-text, .colleft h3, .collright #collleft-text, .collright h3 {
     margin-left: 45px; }
-  .colleft p, .collright p {
+  .colleft #collleft-text, .collright #collleft-text {
     width: 252px;
     height: 144px;
     font-size: 14px;
     color: #656565; }
   .colleft a, .collright a {
-    display: block;
-    text-align: center;
     font-size: 18px;
-    color: #50c5da;
-    margin-top: 35px; }
+    color: #50c5da; }
+
+.colleft a {
+  width: 252px;
+  display: block;
+  text-align: right;
+  margin: 35px 0 0 45px; }
+
+.slider-section {
+  display: flex;
+  flex-direction: column;
+  width: 335px;
+  margin-left: 45px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #43C6D7; }
+  .slider-section .slider-value {
+    width: 335px;
+    display: flex;
+    justify-content: space-between; }
+  .slider-section .slider {
+    position: relative;
+    width: 335px;
+    height: 20px;
+    background-color: #EBEBEB; }
+    .slider-section .slider .slider-handle {
+      position: absolute;
+      top: -50%;
+      width: 63px;
+      height: 38px;
+      background-color: #43C6D7;
+      color: #ffffff;
+      line-height: 38px;
+      border-radius: 10px;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      text-align: center;
+      letter-spacing: 3px; }
+    .slider-section .slider span {
+      font-size: 14px; }
+
+.sum {
+  display: flex;
+  justify-content: space-between;
+  width: 335px;
+  margin: 20px 0 0 45px; }
+
+.total-value {
+  font-size: 18px;
+  margin: 0; }
+  .total-value span {
+    font-size: 22px;
+    color: #43C6D7; }
 
 .services {
   background-color: #43C6D7;
@@ -180,10 +232,14 @@ body {
     font-size: 22px;
     line-height: 54px;
     text-decoration: none; }
+    .services a:hover {
+      font-weight: bold; }
   .services .button {
     width: 242px;
     height: 54px;
     border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
     border: 1px solid #ffffff;
     margin: 30px auto; }
 
@@ -201,6 +257,8 @@ body {
     font-size: 14px;
     font-weight: 400;
     line-height: 30px; }
+    .client_products li:hover {
+      color: #43C6D7; }
   .client_products ul {
     list-style-image: url("./../images/square.png"); }
 

@@ -4,3 +4,12 @@ $smartphone: "(max-width: 400px)";
 $tablet: "(min-width: 400px)";
 $laptop: "(min-width: 1025px)";
 $portrait: "(orientation: portrait)";
+
+$primary-color: #43C6D7;
+$center: 0 auto;
+
+@mixin radius($size...){
+    border-radius: $size;
+    -moz-border-radius: $size;
+    -webkit-border-radius: $size;
+}
