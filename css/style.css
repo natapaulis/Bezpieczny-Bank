@@ -24,8 +24,8 @@ body {
   padding: 0; }
 
 .form input[type=submit] {
-  width: 166px;
-  height: 30px;
+  width: 11.85rem;
+  height: 2.14rem;
   background-color: #43C6D7;
   border-radius: 10px;
   -moz-border-radius: 10px;
@@ -34,7 +34,7 @@ body {
   color: white; }
 
 .form input[type=search] {
-  width: 150px; }
+  width: 10.71rem; }
   .form input[type=search]::after {
     background: url("./../images/Shape-5.png");
     position: absolute;
@@ -54,12 +54,12 @@ body {
     margin: 0; }
 
 .navbar {
-  margin: 1.5em 0 0 0;
+  margin: 1.5rem 0 0 0;
   font-size: 13px;
-  padding: 0 0 0 20px; }
+  padding: 0 0 0 1.4rem; }
   .navbar li {
     display: inline-block;
-    padding: .4em;
+    padding: .4rem;
     border-right: 1px solid #EBEBEB; }
     .navbar li:hover {
       color: #43C6D7; }
@@ -67,7 +67,7 @@ body {
 .bank-name {
   display: flex;
   align-items: center;
-  margin-right: .8em; }
+  margin-right: .8rem; }
 
 .bank-name p {
   font-size: 21px; }
@@ -79,10 +79,10 @@ body {
   background-image: url("./../images/triangle.jpg");
   background-repeat: repeat-x;
   background-size: contain;
-  height: 10px; }
+  height: .71rem; }
 
 .square-pattern {
-  height: 10px;
+  height: .71rem;
   background-color: #43C6D7; }
 
 .banner img {
@@ -91,48 +91,47 @@ body {
 .text {
   position: absolute;
   z-index: 4;
-  bottom: 175px;
+  bottom: 10rem;
   right: 0;
   background-color: #43C6D7;
-  width: 375px;
-  height: 205px;
+  width: 26.78rem;
+  height: 14.64rem;
   border-radius: 10px 0 0 10px;
   -moz-border-radius: 10px 0 0 10px;
-  -webkit-border-radius: 10px 0 0 10px;
-  border: 0px solid #000000; }
+  -webkit-border-radius: 10px 0 0 10px; }
   .text p, .text h3 {
     color: white;
-    margin-bottom: 5px;
+    margin-bottom: 0.35em;
     width: 100%; }
   .text h3 {
     position: absolute;
-    top: 55px;
-    left: 38px;
+    top: 3.92rem;
+    left: 2.71rem;
     font-size: 28px;
     margin-top: 0;
     font-weight: 400;
     letter-spacing: 1px; }
   .text p {
     position: absolute;
-    top: 15px;
-    left: 38px;
+    top: 1.07rem;
+    left: 2.71rem;
     font-size: 17px; }
   .text a {
     position: absolute;
-    bottom: 20px;
-    left: 30px;
+    bottom: 1.42rem;
+    left: 2.14rem;
     display: block;
     text-decoration: none;
     margin: 0 auto;
-    width: 195px;
-    height: 45px;
+    width: 13.92rem;
+    height: 3.21rem;
     background-color: black;
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border: 0px solid #000000;
     color: white;
-    line-height: 45px;
+    line-height: 3.21rem;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px; }
@@ -141,57 +140,63 @@ body {
 
 .products {
   background-color: white;
-  height: 400px; }
+  min-height: 28.57rem; }
 
 .colleft, .collright {
-  margin-top: 45px; }
+  margin-top: 3.21rem; }
   .colleft img, .collright img {
-    margin-top: 75px; }
+    margin-top: 5.35rem; }
   .colleft h3, .collright h3 {
     font-size: 27px;
     font-weight: 400;
     color: #656565; }
-  .colleft #collleft-text, .colleft h3, .collright #collleft-text, .collright h3 {
-    margin-left: 45px; }
-  .colleft #collleft-text, .collright #collleft-text {
-    width: 252px;
-    height: 144px;
-    font-size: 14px;
-    color: #656565; }
   .colleft a, .collright a {
     font-size: 18px;
-    color: #50c5da; }
+    color: #43C6D7; }
+
+.colleft h3 {
+  margin-left: 3.21rem; }
+
+.colleft p {
+  margin-left: 3.21rem;
+  width: 18rem;
+  height: 10.28rem;
+  font-size: 14px;
+  color: #656565; }
 
 .colleft a {
-  width: 252px;
+  width: 18rem;
   display: block;
   text-align: right;
-  margin: 35px 0 0 45px; }
+  margin: 2.5rem 0 0 3.21rem; }
 
-.slider-section {
+.collright {
   display: flex;
   flex-direction: column;
-  width: 335px;
-  margin-left: 45px;
-  padding-bottom: 20px;
+  justify-content: space-around;
+  align-items: center; }
+  .collright h3 {
+    width: 23.92rem; }
+
+.slider-section {
+  width: 23.92rem;
+  padding-bottom: 1.42rem;
   border-bottom: 2px solid #43C6D7; }
   .slider-section .slider-value {
-    width: 335px;
     display: flex;
     justify-content: space-between; }
   .slider-section .slider {
     position: relative;
-    width: 335px;
-    height: 20px;
+    height: 1.42rem;
     background-color: #EBEBEB; }
     .slider-section .slider .slider-handle {
       position: absolute;
       top: -50%;
-      width: 63px;
-      height: 38px;
+      width: 4.5rem;
+      height: 2.71rem;
       background-color: #43C6D7;
       color: #ffffff;
-      line-height: 38px;
+      line-height: 2.71rem;
       border-radius: 10px;
       -moz-border-radius: 10px;
       -webkit-border-radius: 10px;
@@ -203,11 +208,11 @@ body {
 .sum {
   display: flex;
   justify-content: space-between;
-  width: 335px;
-  margin: 20px 0 0 45px; }
+  width: 23.92rem;
+  margin-top: 20px; }
 
 .total-value {
-  font-size: 18px;
+  font-size: 1.42rem;
   margin: 0; }
   .total-value span {
     font-size: 22px;
@@ -215,39 +220,39 @@ body {
 
 .services {
   background-color: #43C6D7;
-  height: 376px;
-  padding-top: 40px;
+  min-height: 26.85rem;
+  padding-top: 2.85rem;
   text-align: center; }
   .services h4, .services p, .services a {
     color: #ffffff; }
   .services h4 {
     font-size: 32px;
     font-weight: 500;
-    margin: 20px 0 10px; }
+    margin: 1.42rem 0 0.71rem; }
   .services p {
     font-size: 16px;
     font-weight: 400;
-    margin: 10px 0; }
-  .services a {
-    font-size: 22px;
-    line-height: 54px;
-    text-decoration: none; }
-    .services a:hover {
-      font-weight: bold; }
+    margin: 0.71rem 0; }
   .services .button {
-    width: 242px;
-    height: 54px;
+    width: 17.28rem;
+    height: 3.85rem;
     border-radius: 8px;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border: 1px solid #ffffff;
-    margin: 30px auto; }
+    margin: 2.14rem auto; }
+  .services a {
+    font-size: 22px;
+    line-height: 3.85rem;
+    text-decoration: none; }
+    .services a:hover {
+      font-weight: bold; }
 
 .client_products {
-  height: 375px;
+  min-height: 26.78rem;
   background-color: #ffffff; }
   .client_products .client_products-collumn {
-    padding: 20px 0 0 65px; }
+    padding: 1.42rem 0 0 4.64rem; }
   .client_products h4, .client_products li {
     color: #717070; }
   .client_products h4 {
@@ -256,7 +261,7 @@ body {
   .client_products li {
     font-size: 14px;
     font-weight: 400;
-    line-height: 30px; }
+    line-height: 2.14rem; }
     .client_products li:hover {
       color: #43C6D7; }
   .client_products ul {
