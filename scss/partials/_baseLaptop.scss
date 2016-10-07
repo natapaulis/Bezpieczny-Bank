@@ -11,6 +11,10 @@ body {
 .main-width {
     width: 85%;
     margin: $center;
+    @include tablet {
+        width: 95%;
+        margin: $center;
+    }
 }
 
 //Sekcja górna z logo i searchem
@@ -21,21 +25,22 @@ body {
 }
 
 .logo, .form {
-  margin: 1.5em 0 1.5em 0;
+    margin: 1.5em 0 1.5em 0;
 }
+
 .top .form {
-  position: relative;
-  display: block;
-  padding: 0;
+    position: relative;
+    display: block;
+    padding: 0;
 }
 
 .form input[type=submit]{
-  width: 11.85rem;
-  height: 2.14rem;
-  background-color: $primary-color;
-  @include radius(10px);
-  border: 0px solid #000000;
-  color: white;
+    width: 11.85rem;
+    height: 2.14rem;
+    background-color: $primary-color;
+    @include radius(10px);
+    border: 0px solid #000000;
+    color: white;
 }
 
 .form input[type=search]{
@@ -113,69 +118,65 @@ body {
 }
 
 .text {
-  position: absolute;
-  z-index: 4;
-  bottom: 10rem;
-  right: 0;
-  background-color: $primary-color;
-  width: 26.78rem;
-  height: 14.64rem;
-  @include radius(10px 0 0 10px);
-  p, h3 {
-    color: white;
-    margin-bottom: 0.35em;
-    width: 100%;
-  }
-  h3 {
     position: absolute;
-    top:3.92rem;
-    left: 2.71rem;
-    font-size: 28px;
-    margin-top: 0;
-    font-weight:400;
-    letter-spacing: 1px;
-  }
-  p {
-    position: absolute;
-    top: 1.07rem;
-    left: 2.71rem;
-    font-size: 17px;
-  }
-  a {
-    position: absolute;
-    bottom: 1.42rem;
-    left: 2.14rem;
-    display: block;
-    text-decoration: none;
-    margin: $center;
-    width: 13.92rem;
-    height: 3.21rem;
-    background-color: black;
-    @include radius(10px);
-    border: 0px solid #000000;
-    color: white;
-    line-height: 3.21rem;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    &:hover {
-      font-weight: bold;
+    z-index: 4;
+    bottom: 30%;
+    right: 0;
+    background-color: $primary-color;
+    width: 26.78rem;
+    height: 14.64rem;
+    @include radius(10px 0 0 10px);
+    p, h3 {
+        color: white;
+        margin-bottom: 0.35em;
+        width: 100%;
+        left: 10%;
     }
-  }
+    h3 {
+        position: absolute;
+        top:30%;
+        font-size: 28px;
+        margin-top: 0;
+        font-weight:400;
+        letter-spacing: 1px;
+    }
+    p {
+        position: absolute;
+        top: 10%;
+        font-size: 17px;
+    }
+    a {
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        display: block;
+        text-decoration: none;
+        margin: $center;
+        width: 13.92rem;
+        height: 3.21rem;
+        background-color: black;
+        @include radius(10px);
+        color: white;
+        line-height: 3.21rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        &:hover {
+            font-weight: bold;
+        }
+    }
 }
 
 // Sekcja z produktami
 
 .products {
-  background-color: white;
-  min-height: 28.57rem;
+    background-color: white;
+    min-height: 28.57rem;
+    @include flexing-row;
 }
 
 .colleft, .collright {
-    margin-top: 3.21rem;
-    img {
-         margin-top: 5.35rem;
-    }
+    margin: 3.21rem 1rem 3.21rem 1rem;
     h3 {
         font-size: 27px;
         font-weight: 400;
@@ -188,11 +189,9 @@ body {
 }
 
 .colleft {
-    h3 {
-        margin-left: 3.21rem;
-    }
+    @include flexing-row;
+    align-items: center;
     p {
-        margin-left: 3.21rem;
         width: 18rem;
         height: 10.28rem;
         font-size: 14px;
@@ -204,6 +203,18 @@ body {
         text-align: right;
         margin: 2.5rem 0 0 3.21rem;
     }
+    p, a {
+        @include lg-tablet {
+            width: 30rem;
+        }
+        @include smartphone {
+            width: 18rem;
+        }
+    }
+}
+
+.colleft-image img {
+    width: 100%;
 }
 
 .collright {
@@ -244,6 +255,12 @@ body {
             font-size: 14px;
         }
     }
+    @include lg-tablet {
+        width: 30rem;
+    }
+    @include smartphone {
+        width: 23rem;
+    }
 }
 
 .sum {
@@ -270,6 +287,7 @@ body {
     min-height: 26.85rem;
     padding-top: 2.85rem;
     text-align: center;
+    @include flexing-row;
     h4, p, a {
         color: #ffffff;
     }
@@ -305,9 +323,7 @@ body {
 .client_products {
     min-height: 26.78rem;
     background-color: #ffffff;
-    .client_products-collumn {
-        padding: 1.42rem 0 0 4.64rem;
-    }
+    @include flexing-row;
     h4, li {
         color: #717070;
     }
@@ -332,15 +348,16 @@ body {
 //Footer part
 
 .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: #a0a0a0;
     p {
         font-size: 12px;
+        margin-right:1rem;
     }
     span {
         font-size: 16px;
     }
-}
-.footer-right {
-    text-align: right;
 }
 
