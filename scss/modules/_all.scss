@@ -17,3 +17,12 @@ $center: 0 auto;
     flex-flow: wrap row;
     justify-content: space-around;
 }
+
+@keyframes pulsowanie {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

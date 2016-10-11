@@ -1,4 +1,10 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway:200,400,800';
+@keyframes pulsowanie {
+  0% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
+
 * {
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
@@ -10,10 +16,6 @@ body {
 .main-width {
   width: 85%;
   margin: 0 auto; }
-  @media (max-width: 900px) {
-    .main-width {
-      width: 95%;
-      margin: 0 auto; } }
 
 .top {
   display: flex;
@@ -36,6 +38,10 @@ body {
   -webkit-border-radius: 10px;
   border: 0px solid #000000;
   color: white; }
+  .form input[type=submit]:hover {
+    background-color: white;
+    border: 1px solid #43C6D7;
+    color: black; }
 
 .form input[type=search] {
   width: 10.71rem; }
@@ -56,6 +62,9 @@ body {
   background-color: white; }
   .nav .menu {
     margin: 0; }
+
+.menu-bars {
+  display: none; }
 
 .navbar {
   margin: 1.5rem 0 0 0;
@@ -103,6 +112,8 @@ body {
   border-radius: 10px 0 0 10px;
   -moz-border-radius: 10px 0 0 10px;
   -webkit-border-radius: 10px 0 0 10px; }
+  .text:hover {
+    animate: pulsowanie 1s linear 1; }
   .text p, .text h3 {
     color: white;
     margin-bottom: 0.35em;
@@ -138,7 +149,10 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px; }
     .text a:hover {
-      font-weight: bold; }
+      background-color: #EBEBEB;
+      border: 1px solid black;
+      color: black;
+      font-weight: 600; }
 
 .products {
   background-color: white;
@@ -197,25 +211,27 @@ body {
   .slider-section .slider-value {
     display: flex;
     justify-content: space-between; }
+    .slider-section .slider-value span {
+      font-size: 16px; }
   .slider-section .slider {
     position: relative;
     height: 1.42rem;
     background-color: #EBEBEB; }
-    .slider-section .slider .slider-handle {
+    .slider-section .slider .ui-slider-handle {
       position: absolute;
       top: -50%;
       width: 4.5rem;
       height: 2.71rem;
-      background-color: #43C6D7;
-      color: #ffffff;
-      line-height: 2.71rem;
       border-radius: 10px;
       -moz-border-radius: 10px;
       -webkit-border-radius: 10px;
+      background-color: #43C6D7;
+      color: #ffffff;
+      line-height: 2.71rem;
       text-align: center;
       letter-spacing: 3px; }
-    .slider-section .slider span {
-      font-size: 14px; }
+      .slider-section .slider .ui-slider-handle::after {
+        content: "|||"; }
   @media (max-width: 1020px) {
     .slider-section {
       width: 30rem; } }
@@ -262,12 +278,12 @@ body {
     -webkit-border-radius: 8px;
     border: 1px solid #ffffff;
     margin: 2.14rem auto; }
-  .services a {
-    font-size: 22px;
-    line-height: 3.85rem;
-    text-decoration: none; }
-    .services a:hover {
-      font-weight: bold; }
+    .services .button a {
+      font-size: 22px;
+      line-height: 3.85rem;
+      text-decoration: none; }
+      .services .button a:hover {
+        font-weight: bold; }
 
 .client_products {
   min-height: 26.78rem;
@@ -275,7 +291,7 @@ body {
   display: flex;
   flex-flow: wrap row;
   justify-content: space-around; }
-  .client_products h4, .client_products li {
+  .client_products h4 {
     color: #717070; }
   .client_products h4 {
     font-size: 18px;
@@ -284,8 +300,11 @@ body {
     font-size: 14px;
     font-weight: 400;
     line-height: 2.14rem; }
-    .client_products li:hover {
-      color: #43C6D7; }
+    .client_products li a {
+      color: #717070;
+      text-decoration: none; }
+      .client_products li a:hover {
+        color: #43C6D7; }
   .client_products ul {
     list-style-image: url("./../images/square.png"); }
 
@@ -297,11 +316,49 @@ body {
   .footer p {
     font-size: 12px;
     margin-right: 1rem; }
+    .footer p a {
+      color: #a0a0a0;
+      text-decoration: none; }
+      .footer p a:hover {
+        text-decoration: underline; }
   .footer span {
     font-size: 16px; }
 
 @media (max-width: 900px) {
+  .main-width {
+    width: 95%;
+    margin: 0 auto; }
+  .menu-bars {
+    display: flex;
+    align-content: flex-end; }
+    .menu-bars i {
+      font-size: 30px; }
+  .nav {
+    flex-direction: column-reverse; }
+  .bank-name {
+    align-self: flex-end; }
+  .navbar li {
+    display: none; }
+    .navbar li.active {
+      display: block;
+      width: 90%;
+      text-align: center;
+      padding: 10px;
+      border-bottom: 1px solid black;
+      border-right: 0; }
   .banner {
-    overflow: hidden; }
-  .text {
-    right: -25%; } }
+    padding-bottom: 10rem; }
+    .banner .text {
+      bottom: 0;
+      width: 100%;
+      height: 11rem;
+      border-radius: 0;
+      -moz-border-radius: 0;
+      -webkit-border-radius: 0; }
+      .banner .text p {
+        top: 5%; }
+  .colleft a {
+    margin: 0; }
+  .footer {
+    flex-direction: column;
+    text-align: center; } }
