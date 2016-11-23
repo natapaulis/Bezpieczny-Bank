@@ -1,182 +1,186 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bezpieczny Bank</title>
-  <link href="css/style.css" rel="stylesheet" type = "text/css">
-  <link href="external/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" type = "text/css">
-  <link href="bower_components/skeleton/css/normalize.css" rel="stylesheet">
-  <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bezpieczny Bank</title>
+    <link href="css/style.css" rel="stylesheet" type = "text/css">
+    <link href="external/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" type = "text/css">
+    <link href="bower_components/skeleton/css/normalize.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
+
 <body>
 
-  <header>
-    <section class="top main-width">
-      <img class="logo" src="images/logo.png">
-      <form action="#" class="form">
-        <input type="search" placeholder="Szukaj">
-        <input type="submit" value="Zaloguj">
-      </form>
+    <header>
+        <section class="top main-width">
+            <div class="logo">
+                <img src="images/logo.png">
+            </div>
+            <form action="#" class="form">
+                <input type="search" placeholder="Szukaj">
+                <span> <i class="fa fa-search fa-lg" aria-hidden="true"></i></span>
+                <input type="submit" value="Zaloguj">
+            </form>
+        </section>
+
+        <nav>
+            <section class="nav main-width">
+                <div class="menu">
+                    <ul class="navbar">
+                        <li> Klienci indywidualnie </li>
+                        <li> Przedsiębiorcy </li>
+                        <li> Firmy i samorzady </li>
+                        <li> Rolnicy </li>
+                        <li> Korporacje </li>
+                        <li> Uczniowie, studenci </li>
+                    </ul>
+                </div>
+                <div class="bank-name">
+                    <span class="menu-bars"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> </span>
+                    <p>Bezpieczny Bank<p>
+                </div>
+            </section>
+        </nav>
+
+        <section class="banner main-width">
+            <div class="triangle-pattern"></div>
+            <div class="square-pattern"></div>
+            <img src="images/banerjpg.jpg">
+            <div class="text">
+                <p> Skorzystaj ze specjalnej oferty </p>
+                <h3> PODRÓŻUJ BEZ OBAW </h3>
+                <a href="#"> Sprawdź </a>
+            </div>
+        </section>
+    </header>
+
+    <section class="container">
+        <section class ="main-width products">
+            <div class="colleft">
+                <div class="colleft-image">
+                    <img src="images/keys.jpg">
+                </div>
+                <div class="colleft-descript">
+                    <h3> Kredyt Hipoteczny </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis.    Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim.
+                    </p>
+                    <a href="#" class="find-out"> Dowiedz się więcej </a>
+                </div>
+            </div>
+            <div class="collright">
+                <h3> Pożyczka gotówkowa </h3>
+                <div class="slider-section">
+                    <div class="slider-value">
+                        <span>Kwota</span> <div><span id="value">1 000</span><span>zł</span> </div>
+                    </div>
+                    <br>
+                    <div class="slider sliderMoney">
+                    </div>
+                    <br>
+                    <div class="slider-value">
+                        <span>Czas trwania</span> <div> <span id="years">1</span><span> m-c </span> </div>
+                    </div>
+                    <br>
+                    <div class="slider sliderYears ui-slider-range">
+                    </div>
+                    <br>
+                </div>
+                <div class="sum">
+                    <p class="total-value">Rata: <span id="total">0</span><span>zł</span></p>
+                    <a href="#" class="find-out"> Dowiedz się więcej </a>
+                </div>
+            </div>
+        </section>
     </section>
 
-    <nav>
-      <section class="nav main-width">
-        <div class="menu">
-          <span class="menu-bars"><i class="fa fa-bars" aria-hidden="true"></i> </span>
-          <ul class="navbar">
-            <li> Klienci indywidualnie </li>
-            <li> Przedsiębiorcy </li>
-            <li> Firmy i samorzady </li>
-            <li> Rolnicy </li>
-            <li> Korporacje </li>
-            <li> Uczniowie, studenci </li>
-          </ul>
-        </div>
-        <div class="bank-name">
-           <p>Bezpieczny Bank<p>
-        </div>
-      </section>
-    </nav>
-
-    <section class="banner main-width">
-      <div class="triangle-pattern"></div>
-      <div class="square-pattern"></div>
-      <img src="images/banerjpg.jpg">
-      <div class="text">
-        <p> Skorzystaj ze specjalnej oferty </p>
-        <h3> PODRÓŻUJ BEZ OBAW </h3>
-        <a href="#"> Sprawdź </a>
-      </div>
+    <section class="container">
+        <section class ="main-width services">
+            <div>
+                <img src="images/Layer-12.png">
+                <h4> Konto online </h4>
+                <p> Załóż konto przez internet </p>
+                <a href="#"> <div class="button">  Otwórz konto </div> </a>
+            </div>
+            <div>
+                <img src="images/cloud.svg">
+                <h4> Rozpocznij czat </h4>
+                <p> Porozmawiaj z doradca </p>
+                <a href="#"> <div class="button"> Zapytaj </div> </a>
+            </div>
+            <div>
+                <img src="images/procent.png">
+                <h4> Kredyt gotówkowy </h4>
+                <p> Ustal ratę i datę spłaty </p>
+            <a href="#"> <div class="button">  Sprawdź  </div> </a>
+            </div>
+        </section>
     </section>
-  </header>
 
-  <section class="container">
-      <section class ="main-width products">
-          <div class="colleft">
-              <div class="colleft-image">
-                  <img src="images/keys.jpg">
-              </div>        
-              <div class="colleft-descript">
-                  <h3> Kredyt Hipoteczny </h3>
-                  <p>
-                      Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis.    Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim.
-                  </p>
-                  <a href="#"> Dowiedz się więcej </a>
-              </div>
-          </div>
-          <div class="collright">
-              <h3> Pożyczka gotówkowa </h3>
-              <div class="slider-section">
-                  <div class="slider-value">
-                    <span>Kwota</span> <div><span id="value">1 000</span><span>zł</span> </div>
-                  </div>
-                  <br>
-                  <div class="slider sliderMoney">
-                  </div>
-                  <br>
-                  <div class="slider-value">
-                      <span>Czas trwania</span> <div> <span id="years">1</span><span> m-c </span> </div>
-                  </div>
-                  <br>
-                  <div class="slider sliderYears">
-                  </div>
-                  <br>
-              </div>
-              <div class="sum">
-                <p class="total-value">Rata: <span id="total">0</span><span>zł</span></p>
-                  <a href="#"> Dowiedz się więcej </a>
-              </div>
-          </div>
-      </section>
-  </section>
-
-  <section class="container">
-    <section class ="main-width services">
-      <div>
-        <img src="images/Layer-12.png">
-        <h4> Konto online </h4>
-        <p> Załóż konto przez internet </p>
-        <div class="button"> <a href="a"> Otwórz konto </a> </div>
-      </div>
-      <div>
-        <img src="images/cloud.svg">
-        <h4> Rozpocznij czat </h4>
-        <p> Porozmawiaj z doradca </p>
-        <div class="button"> <a href="a"> Zapytaj </a> </div>
-      </div>
-      <div>
-        <img src="images/procent.png">
-        <h4> Kredyt gotówkowy </h4>
-        <p> Ustal ratę i datę spłaty </p>
-        <div class="button"> <a href="a"> Sprawdź </a> </div>
-      </div>
+    <section class="container bottom">
+        <section class ="main-width client_products">
+            <div>
+                <h4> Klienci indywidualni </h4>
+                <ul>
+                    <li><a href="#">Konta</a></li>
+                    <li><a href="#">Oszczędności</a></li>
+                    <li><a href="#">Kredyty</a></li>
+                    <li><a href="#">Karty</a></li>
+                    <li><a href="#">Ubezpieczenie</a></li>
+                    <li><a href="#">Inwestycje</a></li>
+                    <li><a href="#">Programy</a></li>
+                    <li><a href="#">Bankowość elektroniczna</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4> Klienci VIP Premium </h4>
+                <ul>
+                    <li><a href="#">Konta</a></li>
+                    <li><a href="#">Lokaty i inwestycje </a></li>
+                    <li><a href="#">Kredyty</a></li>
+                    <li><a href="#">Karty</a></li>
+                    <li><a href="#">Ubezpieczenie</a></li>
+                    <li><a href="#">Ubezpieczenie inwestycyjne</a></li>
+                    <li><a href="#">Programy</a></li>
+                    <li><a href="#">Programy VIP Premium</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4> Małe firmy i korporacje </h4>
+                <ul>
+                    <li><a href="#">Konta</a></li>
+                    <li><a href="#">Lokaty i inwestycje</a> </li>
+                    <li><a href="#">Kredyty</a></li>
+                    <li><a href="#">Transakcje walutowe</a></li>
+                    <li><a href="#">Gwarancje bankowe</a></li>
+                    <li><a href="#">Transakcje płatnicze</a></li>
+                    <li><a href="#">Faktoring</a></li>
+                    <li><a href="#">Bankowość elektroniczna</a></li>
+                </ul>
+            </div>
+        </section>
     </section>
-  </section>
 
-  <section class="container bottom">
-    <section class ="main-width client_products">
-      <div>
-        <h4> Klienci indywidualni </h4>
-        <ul>
-          <li><a href="#">Konta</a></li>
-          <li><a href="#">Oszczędności</a></li>
-          <li><a href="#">Kredyty</a></li>
-          <li><a href="#">Karty</a></li>
-          <li><a href="#">Ubezpieczenie</a></li>
-          <li><a href="#">Inwestycje</a></li>
-          <li><a href="#">Programy</a></li>
-          <li><a href="#">Bankowość elektroniczna</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4> Klienci VIP Premium </h4>
-        <ul>
-          <li><a href="#">Konta</a></li>
-          <li><a href="#">Lokaty i inwestycje </a></li>
-          <li><a href="#">Kredyty</a></li>
-          <li><a href="#">Karty</a></li>
-          <li><a href="#">Ubezpieczenie</a></li>
-          <li><a href="#">Ubezpieczenie inwestycyjne</a></li>
-          <li><a href="#">Programy</a></li>
-          <li><a href="#">Programy VIP Premium</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4> Małe firmy i korporacje </h4>
-        <ul>
-          <li><a href="#">Konta</a></li>
-          <li><a href="#">Lokaty i inwestycje</a> </li>
-          <li><a href="#">Kredyty</a></li>
-          <li><a href="#">Transakcje walutowe</a></li>
-          <li><a href="#">Gwarancje bankowe</a></li>
-          <li><a href="#">Transakcje płatnicze</a></li>
-          <li><a href="#">Faktoring</a></li>
-          <li><a href="#">Bankowość elektroniczna</a></li>
-        </ul>
-      </div>
-    </section>
-  </section>
-
-  <footer>
-    <section class="main-width footer">
-        <div class="footer-left">
-            <p>
-                <span> 801 222 222 </span><br>
-                &copy; 2015 BB Bezpieczny Bank S.A. Warszawa prawa zastrzerzone. Korzystanie z serwisu oznacza akceptacji regulaminu
-            </p>
-        </div>
-        <div class="footer-right">
-            <p>
-              <a href="#"> Mapa serwisu </a>|<a href="#"> English </a> | <a href="#">Twitter </a> | <a href="#"> Facebook </a>
-            </p>
-        </div>
-    </section>
-  </footer>
+    <footer>
+        <section class="main-width footer">
+            <div class="footer-left">
+                <p>
+                    <span> 801 222 222 </span><br>
+                    &copy; 2015 BB Bezpieczny Bank S.A. Warszawa prawa zastrzerzone. Korzystanie z serwisu oznacza akceptacji regulaminu
+                </p>
+            </div>
+            <div class="footer-right">
+                <p>
+                    <a href="#"> Mapa serwisu </a>|<a href="#"> English </a> | <a href="#">Twitter </a> |
+                    <a href="#"> Facebook </a>
+                </p>
+            </div>
+        </section>
+    </footer>
 
 </body>
-  <script src="external/jquery-3.1.1.js" type="text/javascript"> </script>
+    <script src="external/jquery-3.1.1.js" type="text/javascript"> </script>
     <script src="external/jquery-ui-1.12.1.custom/jquery-ui.min.js" type="text/javascript"> </script>
-    
     <script src="js/app.js" type="text/javascript"> </script>
 </html>

@@ -1,11 +1,11 @@
 * {
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: #EBEBEB;
+  background-color: $base-color;
 }
 
 .main-width {
@@ -30,96 +30,97 @@ body {
     padding: 0;
 }
 
-.form input[type=submit]{
-  width: 11.85rem;
-  height: 2.14rem;
-  background-color: $primary-color;
-  @include radius(10px);
-  border: 0px solid #000000;
-  color: white;
-  &:hover {
-    background-color: white;
-    border: 1px solid $primary-color;
-    color: black;
-  }
-}
-
 .form input[type=search]{
-  width: 10.71rem;
-  &::after {
-    background: url("./../images/Shape-5.png");
-    position: absolute;
-    left: 130px;
-    top: 5px;
-    border-left: 1px solid #cacaca;
-    padding: 10px;
-    display: block;
-    height: 15px;
-  }
+    width: 12rem;
+    height: 2rem;
+    text-indent: 10px;
+    color: $base-color;
+    margin-right: 10px;
 }
 
+.fa-search {
+    position: absolute;
+    display: block;
+    border-left: 1px solid #cacaca;
+    color: $primary-color;
+    padding: 10px;
+    left: 135px;
+}
+
+.form input[type=submit]{
+    width: 11.85rem;
+    height: 2.14rem;
+    background-color: $primary-color;
+    @include radius(10px);
+    border: 0px solid #000000;
+    color: white;
+    &:hover {
+        background-color: white;
+        border: 1px solid $primary-color;
+        color: black;
+    }
+}
 
 
 //Sekcja z nawigacja
 
 .nav {
-  display: flex;
-  align-content: flex-end;
-  justify-content: space-between;
-  background-color: white;
-    .menu{
-        margin:0;
+    display: flex;
+    align-content: flex-end;
+    justify-content: space-between;
+    background-color: white;
+    .menu {
+        margin: 0;
     }
 }
 
 .menu-bars {
-        display: none;
-      }
+    display: none;
+}
 
 .navbar {
-  margin: 1.5rem 0 0 0;
-  font-size: 13px;
-  padding: 0 0 0 1.4rem;
-  li {
-    display: inline-block;
-    padding: .4rem;
-    border-right: 1px solid #EBEBEB;
-    &:hover {
-         color: $primary-color; 
-      }
-  }
+    margin: 1.5rem 0 0 0;
+    font-size: 13px;
+    padding: 0 0 0 1.4rem;
+    li {
+        display: inline-block;
+        padding: .4rem;
+        border-right: 1px solid $base-color;
+        &:hover {
+            color: $primary-color;
+        }
+    }
 }
 
 .bank-name {
-  display: flex;
-  align-items: center;
-  margin-right: .8rem;
-}
-
-.bank-name p {
-  font-size: 21px;
+    display: flex;
+    align-items: center;
+    margin-right: .8rem;
+    p {
+        font-size: 21px;
+    }
 }
 
 // Sekcja header ze zdjęciem
 
 .banner{
-  position: relative;
+    position: relative;
 }
 
 .triangle-pattern {
-  background-image: url("./../images/triangle.jpg");
-  background-repeat: repeat-x;
-  background-size: contain;
-  height: .71rem;
+    background-image: url("./../images/triangle.jpg");
+    background-repeat: repeat-x;
+    background-size: contain;
+    height: .71rem;
 }
 
 .square-pattern {
-  height: .71rem;
-  background-color: $primary-color;
+    height: .71rem;
+    background-color: $primary-color;
 }
 
 .banner img {
-  width: 100%;
+    width: 100%;
 }
 
 .text {
@@ -131,9 +132,6 @@ body {
     width: 26.78rem;
     height: 14.64rem;
     @include radius(10px 0 0 10px);
-    &:hover {
-      animate: pulsowanie 1s linear 1;
-  }
     p, h3 {
         color: white;
         margin-bottom: 0.35em;
@@ -142,10 +140,10 @@ body {
     }
     h3 {
         position: absolute;
-        top:30%;
+        top: 30%;
         font-size: 28px;
         margin-top: 0;
-        font-weight:400;
+        font-weight: 400;
         letter-spacing: 1px;
     }
     p {
@@ -170,10 +168,10 @@ body {
         text-transform: uppercase;
         letter-spacing: 1px;
         &:hover {
-          background-color: #EBEBEB;
-          border: 1px solid black;
-          color: black;
-          font-weight: 600;
+            background-color: $base-color;
+            border: 1px solid black;
+            color: black;
+            font-weight: 600;
         }
     }
 }
@@ -195,7 +193,14 @@ body {
     }
     a {
         font-size: 18px;
-        color: $primary-color; 
+        color: $primary-color;
+    }
+}
+
+.find-out {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
     }
 }
 
@@ -243,30 +248,32 @@ body {
     padding-bottom: 1.42rem;
     border-bottom: 2px solid $primary-color;
     .slider-value {
-      display: flex;
-      justify-content: space-between;
-      span {
-        font-size: 16px;
-      }
-    }
-    .slider{
-      position: relative;
-      height: 1.42rem;
-      background-color: #EBEBEB;
-      .ui-slider-handle {
-        position: absolute;
-        top: -50%;
-        width: 4.5rem;
-        height: 2.71rem;
-        @include radius(10px);
-        background-color: $primary-color;
-        &::after {
-          content: "|||";
+        display: flex;
+        justify-content: space-between;
+        span {
+            font-size: 16px;
         }
-        color: #ffffff;
-        line-height: 2.71rem;
-        text-align: center;
-        letter-spacing: 3px;
+    }
+
+    .slider {
+        position: relative;
+        height: 1.42rem;
+        background-color: $base-color;
+        .ui-slider-handle {
+            position: absolute;
+            top: -50%;
+            width: 4.5rem;
+            height: 2.71rem;
+            @include radius(10px);
+            background-color: $primary-color;
+            &::after {
+                content: "|||";
+            }
+            color: #ffffff;
+            line-height: 2.71rem;
+            text-align: center;
+            letter-spacing: 3px;
+            cursor: ew-resize;
         }
     }
     @include lg-tablet {
@@ -275,13 +282,16 @@ body {
     @include smartphone {
         width: 23rem;
     }
+    @include vSmallScreen {
+        width: 20rem;
+    }
 }
 
 .sum {
     display: flex;
     justify-content: space-between;
     width: 23.92rem;
-    margin-top: 20px;  
+    margin-top: 20px;
 }
 
 .total-value {
@@ -315,21 +325,22 @@ body {
         font-weight: 400;
         margin: 0.71rem 0;
     }
-    .button {
-      width: 17.28rem;
-      height: 3.85rem;
-      @include radius(8px);
-      border: 1px solid #ffffff;
-      margin: 2.14rem auto;
-      a {
-        font-size: 22px;
-        line-height: 3.85rem;
+    a {
         text-decoration: none;
-        &:hover {
-          font-weight: bold;
+        .button {
+            width: 17.28rem;
+            height: 3.85rem;
+            @include radius(8px);
+            border: 1px solid #ffffff;
+            margin: 2.14rem auto;
+            font-size: 22px;
+            line-height: 3.85rem;
+            &:hover {
+                color: $primary-color;
+                background-color: #ffffff;
+            }
         }
     }
-  }
 }
 
 //Avaiable products part
@@ -341,27 +352,27 @@ body {
     h4 {
         color: #717070;
     }
-    h4 {   
+    h4 {
         font-size: 18px;
         font-weight: 600;
     }
     li {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 2.14rem;
-      a {
-        color: #717070;
-        text-decoration: none;
-        &:hover {
-          color: $primary-color;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 2.14rem;
+        a {
+            color: #717070;
+            text-decoration: none;
+            &:hover {
+                color: $primary-color;
+            }
         }
-      }
     }
-  
+
     ul {
         list-style-image: url("./../images/square.png");
     }
-    
+
 }
 
 //Footer part
@@ -372,18 +383,17 @@ body {
     align-items: center;
     color: #a0a0a0;
     p {
-      font-size: 12px;
-      margin-right:1rem;
-      a {
-        color: #a0a0a0;
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
+        font-size: 12px;
+        margin-right:1rem;
+        a {
+            color: #a0a0a0;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
         }
-      }
     }
     span {
         font-size: 16px;
     }
 }
-

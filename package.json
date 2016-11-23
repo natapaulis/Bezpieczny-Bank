@@ -9,7 +9,9 @@
     "browser-sync": "^2.13.0",
     "gulp-sourcemaps": "^1.6.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-plumber": "^1.1.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
